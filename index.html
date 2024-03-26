@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Cards</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+            margin: 20px;
+            width: calc(33.33% - 40px);
+            max-width: 300px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-content h2 {
+            margin-top: 0;
+            color: #333;
+            font-size: 20px;
+        }
+
+        .card-content p {
+            color: #666;
+            font-size: 16px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        @media screen and (max-width: 768px) {
+            .card {
+                width: calc(50% - 40px);
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="card">
+            <a href="./Palindrome-Challenge/Palindrome-Challenge.html">
+                <div class="card-content">
+                    <h2>Palindrome Challenge</h2>
+                    <p>Dsa challenge completed using javascript for palindrome check</p>
+                    <p>click to open</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="card">
+            <a href="page2.html">
+                <div class="card-content">
+                    <h2>Card 2 Heading</h2>
+                    <p>Description of card 2</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="card">
+            <a href="page3.html">
+                <div class="card-content">
+                    <h2>Card 3 Heading</h2>
+                    <p>Description of card 3</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="card">
+            <a href="page4.html">
+                <div class="card-content">
+                    <h2>Card 4 Heading</h2>
+                    <p>Description of card 4</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="card">
+            <a href="page5.html">
+                <div class="card-content">
+                    <h2>Card 5 Heading</h2>
+                    <p>Description of card 5</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="card">
+            <a href="page6.html">
+                <div class="card-content">
+                    <h2>Card 6 Heading</h2>
+                    <p>Description of card 6</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+</body>
+
+</html>

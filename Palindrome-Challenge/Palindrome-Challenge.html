@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #007bff;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+    </style>
+    <script>
+
+        function getData(form) {
+
+            if (form.target[0].value === "" || form.target[0].value === undefined) {
+                alert("Please input a value")
+            } else {
+                var isPalindrome = form.target[0].value.replace(/[^a-zA-Z]/g, '').toLowerCase();
+                var arrayValues = isPalindrome.split('');
+                var reverseArrayValues = arrayValues.reverse();
+                var reverseString = reverseArrayValues.join('');
+                if (isPalindrome === reverseString) {
+                    document.querySelector("#result").innerHTML = `${form.target[0].value} is a palindrome`;
+                }
+                else {
+                    document.querySelector("#result").innerHTML = `${form.target[0].value} is not a palindrome`;
+                }
+            }
+        }
+        window.addEventListener("DOMContentLoaded", (event) => {
+            document.getElementById('myForm').addEventListener("submit", (evt) => {
+                evt.preventDefault();
+                getData(evt);
+            })
+        }); 
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Palindrome</h1>
+        <div>
+            <form id="myForm">
+                <label for="text-input">Enter text:</label><br>
+                <input type="text" id="text-input"><br>
+                <input id="check-btn" type="submit" value="Check">
+            </form>
+        </div>
+        <div id="result"></div>
+    </div>
+</body>
+
+</html>
